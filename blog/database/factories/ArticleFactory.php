@@ -9,6 +9,6 @@ $factory->define(Article::class, function (Faker $faker) {
     return [
       'text'=>$faker->text,
       'short_text'=>$faker->text,
-      'author_name'=>$faker->name,
+      'author_name'=>$faker->name
     ];
 });

@@ -8,7 +8,7 @@ use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Http\Response;
 use Tests\TestCase;
 
-class Task5Test extends TestCase
+class Test5 extends TestCase
 {
     use WithoutMiddleware, RefreshDatabase;
 
@@ -25,6 +25,7 @@ class Task5Test extends TestCase
     /* Checks json pagination */
     public function testIndex()
     {
+
         factory($this->modelClass, 50)->create();
         $per_page = rand(5, 15);
         $routeName = $this->modelPluralName . ".index";

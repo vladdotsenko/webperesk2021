@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Article;
 use App\Http\Requests\CreateArticle;
-use App\Models\Articler;
 use App\Http\Resources\ArticleCollection;
 use Illuminate\Http\Request;
 
@@ -38,9 +37,9 @@ class ArticleController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateArticle $request)
     {
-        return redirect()->route('articles.show', [1]);;
+        return redirect()->route('articles.show', [1]);
     }
 
     /**
